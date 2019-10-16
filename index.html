@@ -1,17 +1,48 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<title>Document</title>
-</head>
-<style >
-	body{
-		background-color: black;
-	}
+<style>
+	.flex-container {
+padding: 0;
+margin: 0;
+list-style: none;
+
+display: -webkit-box;
+display: -moz-box;
+display: -ms-flexbox;
+display: -webkit-flex;
+display: flex;
+
+-webkit-flex-flow: row wrap;
+justify-content: space-around;
+}
+
+.flex-item {
+background: tomato;
+padding: 5px;
+width: 150px;
+height: 150px;
+margin-top: 10px;
+
+line-height: 150px;
+color: white;
+font-weight: bold;
+font-size: 3em;
+text-align: center;
+
+
+}
+/* Маленькие экраны */
+@media screen and (max-width: 600px) {
+.flex-container {
+/* На малых экранах мы выставляем элементы в колонку */
+flex-direction: column;
+}
+}
 </style>
 
-
-<body background="http://newpro-kurator.narod.ru/images/v_razrabotke.jpg">
-	<h1>ТЕСТ ТЕСТ ТЕСТ</h1>
-</body>
-</html>
+<div class="flex-container">
+<div class="flex-item">Ш</div>
+<div class="flex-item">К</div>
+<div class="flex-item">У</div>
+<div class="flex-item">Р</div>
+<div class="flex-item">А</div>
+<div class="flex-item">!</div>
+</div>
